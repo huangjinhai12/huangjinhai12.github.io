@@ -6,7 +6,7 @@ Hello World~ This is the blog that I record things.
 
 下面是博客搭建教程，更详细教程请戳[如何搭建jekyll主题的github.io博客](http://meilianwu.com/2018/05/31/blog-build.html)
 
-我的[github](https://github.com/wumeilian)
+我的[github](https://github.com/huangjinhai12)
 
 ![img](https://raw.githubusercontent.com/wumeilian/wumeilian.github.io/master/img/blog-build-6.png)
 
