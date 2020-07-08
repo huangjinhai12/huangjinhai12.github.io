@@ -18,7 +18,7 @@ favicon: favicon.ico
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "Web Developer"
+sidebar-about-description: "Learn to do"
 sidebar-avatar: /img/avatar.png      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
@@ -31,7 +31,7 @@ featured-condition-size: 1              # A tag will be featured if the size of 
 RSS: false
 weibo_username:     false
 zhihu_username:     false
-github_username:    wumeilian
+github_username:    huangjinhai12
 
 
 # Build settings
