@@ -15,6 +15,8 @@ tags:
 如果存在，查看是否存在id_rsa与id_rsa.pub两个文件是否存在。如果也存在，就可以调到下一步；
 如果不存在，便打开终端，输入自己的邮箱地址，创建SSH Key。
 ```
+git config --global user.name "huangjinhai12"
+git config --global user.email "2538082724@qq.com"
 ssh-keygen -t rsa -C "youremail@example.com"
 ```
 - 在笔者的主目录下就会生成/home/grq/.ssh文件夹，里面也会生成文件id_rsa与id_rsa.pub，它们是SSH Key的秘钥对。其中id_rsa是私钥，不能泄露，id_rsa.pub是公钥.
