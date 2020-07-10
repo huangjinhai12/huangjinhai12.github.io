@@ -1,13 +1,13 @@
 ---
 layout:     post
-title:      "如何搭建jekyll主题的github.io博客"
+title:      "如何上传内核源码daogit"
 subtitle:   ""
-author:     "wml"
+author:     "hjh"
 header-img: "img/bg-1.png"
 header-mask:  0.5
 catalog: true
 tags:
-    - 笔记
+    - linux
 ---
 
 1. 首先我们在用户主目录下看是否存在.ssh目录。
