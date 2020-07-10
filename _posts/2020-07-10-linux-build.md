@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "如何上传内核源码daogit"
+title:      "如何上传内核源码到git"
 subtitle:   ""
 author:     "hjh"
 header-img: "img/bg-1.png"
