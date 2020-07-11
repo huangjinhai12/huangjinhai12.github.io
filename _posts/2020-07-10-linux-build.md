@@ -22,10 +22,10 @@ ssh-keygen -t rsa -C "youremail@example.com"
 - 在笔者的主目录下就会生成/home/grq/.ssh文件夹，里面也会生成文件id_rsa与id_rsa.pub，它们是SSH Key的秘钥对。其中id_rsa是私钥，不能泄露，id_rsa.pub是公钥.
 2. 在GitHub端设置SSH Key
 - 登录GitHub，点击右上角头像，Settings -> Personal settings -> SSH and GPG keys。在SSH Keys标签右方点击New SSH Key。
-弹出两个文本框。其中的Title，可以随意命名。笔者此处随便命名为grq-Ubuntu。
+弹出两个文本框。其中的Title，可以随意命名。笔者此处随便命名为aliyun。
 另一个Key文本框，需要输入刚刚生成的id_rsa.pub文件中的内容。粘贴后点击Add SSH Key，即可生成SSH Key.
 3. 上传项目
-- 有网友得出总结，可以将git分为四部分：一部分是自己的本机文件，一部分是缓存区，一个是本地仓库，一个是服务器仓库。==当用户在本机修改了文件后，就应该使用git add xx指令将修改保存到缓存区，然后再用git commit yy指令将推送从缓存区修改到本地仓库中，最后使用git push将本地仓库中的修改推送到服务器仓库中。==
+- 有网友得出总结，可以将git分为四部分：一部分是自己的本机文件，一部分是缓存区，一个是本地仓库，一个是服务器仓库。当用户在本机修改了文件后，就应该使用git add xx指令将修改保存到缓存区，然后再用git commit yy指令将推送从缓存区修改到本地仓库中，最后使用git push将本地仓库中的修改推送到服务器仓库中。
     1. 准备上传
     ```
     这个命令可以把当前目录变成git可以管理的仓库
@@ -66,3 +66,11 @@ ssh-keygen -t rsa -C "youremail@example.com"
     ```
     git push
     ```
+4. 远程仓库回退
+- 代码如下：
+```
+git log
+git reset --soft ${commit-id}
+git stash
+git push -f
+```
