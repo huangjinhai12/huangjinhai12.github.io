@@ -74,3 +74,8 @@ git reset --soft ${commit-id}
 git stash
 git push -f
 ```
+5. 打补丁
+```
+无论是git -format-patch 还是git diff都可以：
+git apply PATCH --reject
+```
