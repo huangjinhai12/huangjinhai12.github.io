@@ -43,3 +43,18 @@ git format-patch commit-id
 可以直接生成commit-id后所有的补丁
 内心崩溃
 ```
+### 5. 反转
+- 根据commit-id生成得补丁不能直接打在内核上，修改太乱了，都是冲突，于是决定把改过的文件提取出来然后根据文件生成补丁，最好打上。
+- 生成补丁的前提是有一个被改动文件的文件列表
+![shell](/img/shell/shell-build-1.png)
+```
+dir1="a"
+dir2="b"
+num=1
+while read line
+do
+    diff -urN $dir1/$line $dir2/$line > vkernel-patch/$num-patch
+    num=$(($num+1))
+done < vkernel.txt
+echo $num
+```
