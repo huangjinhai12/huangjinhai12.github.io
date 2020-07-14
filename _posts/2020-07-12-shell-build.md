@@ -55,6 +55,7 @@ grep -rn "data_chushou_pay_info"  /home/hadoop/nisj/automationDemand/
 - 生成补丁的前提是有一个被改动文件的文件列表
 ![shell](/img/shell/shell-build-1.png)
 ```
+read.sh
 dir1="a"
 dir2="b"
 num=1
@@ -65,3 +66,14 @@ do
 done < vkernel.txt
 echo $num
 ```
+### 6.流程总结
+1. 准备
+- 文件列表已经得到
+- 在aufs补丁通过commit得到
+2. 流程
+- 解压linux-4.4.15文件
+- git init
+- git apply aufs.patch --reject
+- 执行read.sh
+- 将生成的补丁文件打到linux-4.4.15上
+- 编译
