@@ -50,6 +50,8 @@ git format-patch commit-id
 查看文件夹下包含某个字符串的文件
 grep -rn "data_chushou_pay_info"  /home/hadoop/nisj/automationDemand/
 ```
+-  文件列表是根据commit生成的patch文件中文件修改总结部分得出。
+![shell](/img/shell/shell-build-2.png)
 - 生成补丁的前提是有一个被改动文件的文件列表
 ![shell](/img/shell/shell-build-1.png)
 ```
