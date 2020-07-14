@@ -45,6 +45,11 @@ git format-patch commit-id
 ```
 ### 5. 反转
 - 根据commit-id生成得补丁不能直接打在内核上，修改太乱了，都是冲突，于是决定把改过的文件提取出来然后根据文件生成补丁，最好打上。
+- 添加一个很有用的命令
+```
+查看文件夹下包含某个字符串的文件
+grep -rn "data_chushou_pay_info"  /home/hadoop/nisj/automationDemand/
+```
 - 生成补丁的前提是有一个被改动文件的文件列表
 ![shell](/img/shell/shell-build-1.png)
 ```
