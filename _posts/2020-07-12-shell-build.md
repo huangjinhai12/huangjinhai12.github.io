@@ -41,6 +41,7 @@ done < commit.txt
 ```
 git format-patch commit-id
 可以直接生成commit-id后所有的补丁
+git format-patch -n<number> <since> -o path
 内心崩溃
 ```
 ### 5. 反转
