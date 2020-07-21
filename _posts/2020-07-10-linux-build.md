@@ -76,6 +76,7 @@ git push -f
 ```
 5. 打补丁
 ```
+git apply PATCH --check检查补丁是否有问题
 无论是git -format-patch 还是git diff都可以：
 git apply PATCH --reject
 ```
