@@ -48,3 +48,7 @@ menuentry "deepin server V15 hjh Build47 (6A)" --class gnu-linux --class gnu --c
         boot
 }
 ```
+- 参考链接：非常感谢三位老哥
+[debian9升级4.9.0内核到4.19.2内核过程]https://blog.csdn.net/weixin_39465823/article/details/84138135
+[Debian 9 下载内核源码，手动编译安装，从4.9.0-9内核升级到5.1.0]https://blog.csdn.net/QHTSM/article/details/89954135
+[How to Upgrade Kernel of Debian 9 Stretch from Source]https://linuxhint.com/how-to-upgrade-kernel-of-debian-9-stretch-from-source/
