@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "virtualbox虚拟机连接"
+title:      "内核手动编译安装"
 subtitle:   ""
 author:     "wml"
 header-img: "img/bg-1.png"
