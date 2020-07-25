@@ -50,6 +50,8 @@ git format-patch -n<number> <since> -o path
 ```
 查看文件夹下包含某个字符串的文件
 grep -rn "data_chushou_pay_info"  /home/hadoop/nisj/automationDemand/
+查看一个文件包含另一个文件的内容
+grep -f change.txt aufs.txt
 ```
 -  文件列表是根据commit生成的patch文件中文件修改总结部分得出。
 ![shell](/img/shell/shell-build-2.png)
@@ -68,6 +70,7 @@ done < vkernel.txt
 echo $num
 ```
 ### 6.流程总结
+```
 1. 准备
 - 文件列表已经得到
 - 在aufs补丁通过commit得到
@@ -78,3 +81,4 @@ echo $num
 - 执行read.sh
 - 将生成的补丁文件打到linux-4.4.15上
 - 编译
+```
