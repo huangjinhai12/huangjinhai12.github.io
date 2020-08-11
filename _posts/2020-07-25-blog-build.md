@@ -2,7 +2,7 @@
 layout:     post
 title:      "virtualbox虚拟机连接"
 subtitle:   ""
-author:     "wml"
+author:     "hjh"
 header-img: "img/bg-1.png"
 header-mask:  0.5
 catalog: true

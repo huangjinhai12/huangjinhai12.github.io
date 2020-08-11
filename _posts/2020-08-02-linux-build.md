@@ -1,3 +1,15 @@
+---
+layout:     post
+title:      "内核编译调试环境"
+subtitle:   ""
+author:     "hjh"
+header-img: "img/bg-1.png"
+header-mask:  0.5
+catalog: true
+tags:
+    - linux
+---
+
 QEMU模拟器原生支持GDB调试器，这样可以很方便地使用GDB的强大功能对操作系统进行调试，如设置断点；单步执行；查看调用栈、查看寄存器、查看内存、查看变量；修改变量改变执行流程等
 ##### 编译调试版内核
 对内核进行调试需要解析符号信息，所以得编译一个调试版内核。
