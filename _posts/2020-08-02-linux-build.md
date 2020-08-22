@@ -47,15 +47,22 @@ busybox是Linux上的一个应用程序
 同样的会进入图形界面，在Settings中勾选`Build static binary (no shared libs)`，然后save就可以了
 
 编译，执行make install ，根目录下就会生成一个_install 文件夹，就是我们编译的结果了。
-
+- 注意
+在CentOS 7中，使用static方法编译，需要安装static version of glibc-static libstdc++-static。使用如下命令安装
+```
+yum install glibc-static libstdc++-static
+```
 进入该文件夹_install，进行配置
 ```
 cd _install
 mkdir proc
 mkdir sys
 mkdir etc
+mkdir dev
+rm linuxrc
 touch init
-chmod +x init
+chmod a+x init
+sudo cp -a /dev/{null, console, tty, tty1, tty2, tty3, tty4} dev/ #一个一个复制
 ```
 编辑init文件，用于内核初始化
 ```
@@ -82,7 +89,7 @@ lsmod: 列出已经加载的模块
 ```
 接着在busybox的_install目录下输入下面的命令打包文件系统
 ```
-find . | cpio -o --format=newc > ./rootfs.img
+find . | cpio -o --format=newc > ../rootfs.img
 ```
 #### 宿主机MacOs编译调试
 之前配置都是在阿里云服务器上进行。需要将生成的rootfs.img和vmlinux，bzImage下载到本地同一个文件夹
