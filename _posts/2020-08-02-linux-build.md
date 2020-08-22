@@ -113,6 +113,7 @@ qemu-system-x86_64 -s \
 #### 内核模块创建与调试
 创建内核模块
 首先是源代码程序 arbitrarily_write.c在内核编译根目录下
+
 ```
 #include <linux/module.h>
 #include <linux/types.h>
@@ -234,11 +235,11 @@ MODULE_LICENSE("GPL");
 module_init(arw_init);
 module_exit(arw_exit);
 ```
+
 注册了一个 字符设备， 设备文件路径为 /dev/arw, 实现了 arw_ioctl 函数，用户态可以通过 ioctl 和这个函数进行交互。
-
 在 qemu 中创建设备文件，貌似不会帮我们自动创建设备文件，需要手动调用 mknod 创建设备文件，此时需要设备号，于是在注册驱动时把拿到的 主设备号 打印了出来， 次设备号 从 0 开始试 。创建好设备文件后要设置好权限，使得普通用户可以访问
-
 然后是测试代码（用户态调用）test.c
+
 ```
 #include <stdio.h>
 #include <fcntl.h>
@@ -271,6 +272,7 @@ int main(void)
     return 0;
 }
 ```
+
 打开设备文件，然后使用 ioctl 和刚刚驱动进行交互
 接下来是Makefile
 ```
